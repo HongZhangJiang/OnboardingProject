@@ -1,2 +1,87 @@
 /* Custom Site Styles */
 
+html {
+  	background-image: url("../images/background.jpg");
+}
+
+@media screen and (min-width: 37.5em) {
+  html {
+    font-size: 120%;
+  }
+}
+
+#header {
+	background: rgb(246,230,180); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(246,230,180,1) 0%, rgba(237,144,23,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,230,180,1)), color-stop(100%,rgba(237,144,23,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
+	position: relative;
+	margin-top: 40px;
+	border-radius: 12px 12px 0px 0px; 
+}
+
+#header h1 {
+	position: absolute;
+	left: 30%;
+	top: 8%;
+}
+
+#header a#logo1 img {
+margin-top: 1em;
+margin-left: 1em;
+margin-bottom: 1em;
+width: 25%;
+height: 25%;
+}
+
+#header #toplink {
+	position: absolute;
+	top:-20px;
+	right: 10%;
+	font-size: 1em;
+	font: bolder;
+	color: black;
+}
+
+h1 {
+  font-size: 2.074em; /* 37.325px */
+  line-height: 1.0437583893em; /* 38.88px grid (1.5 baselines) -> 51.84/37.325 = 1.0437583893em */
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 1.374em; /* 37.325px */
+  line-height: 1.0437583893em; /* 38.88px grid (1.5 baselines) -> 51.84/37.325 = 1.0437583893em */
+  font-weight: bold;
+}
+
+p {
+  text-indent: 9.09090909%; /* Use one of 7-column grid to indent * */
+}
+
+h2 + p {
+  text-indent: 0; /* But don't indent at all on paragraphs immediately following h2 */
+}
+
+h2 + p::first-line {
+  font-variant: small-caps; /* This is ugly; with OpenType, we can make it better */
+}
+
+#page-wrapper {
+  margin: 1.728em 2.16em 1.44em 1.44em; /* Use 6:5 ratio w/ baseline grid for mobile-first margins */
+background: #FAFAFA; /* A little grayer than true white */
+}
+
+
+@media screen and (min-width: 790px) { 
+  #page-wrapper {
+    margin: 21.81818181% 27.27272727% 1.44em 18.18181818%;
+    /* Top margin makes for the 6:5 ratio of the left one-column margin */
+    /* 21.81818181 / 11 = 1.9834710736% */
+  }
+}
