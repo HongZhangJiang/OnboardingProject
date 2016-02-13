@@ -15,68 +15,62 @@
    		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
    		<script src="js/jquery.js"></script>
    		<script src="js/jquery.validate.js"></script>
-
- 	<script>
-	$.validator.setDefaults({
-		submitHandler: function() {
-			alert("We have received!");
-		}
-	});
-
-	$().ready(function() {
-		// validate signup form on keyup and submit
-		$("#login").validate({
-			rules: {
-				email: {
-					required: true,
-					email: true
-				},
-			},
-			messages: {
-				email: "Please enter a valid email address",
+   		<script src="js/myscript.js"></script>
+	 	<script>
+		$.validator.setDefaults({
+			submitHandler: function() {
+				form.submit();
 			}
 		});
-	});
-	</script>
+
+		$().ready(function() {
+			// validate signup form on keyup and submit
+			$("#login").validate({
+				rules: {
+					email: {
+						required: true,
+						email: true
+					},
+				},
+				messages: {
+					email: "Please enter a valid email address",
+				}
+			});
+		});
+		</script>
  	
  	</head>
 
 	<body>
-	<div id="page-wrapper">
 		<header id="header">
-			<center>
-				<a id="logo1" href="index.html"><img src="images/bread.jpg"></a>
+				<a id="logo1" href="index.html"><img src="images/bread.jpg" alt="Hong's Bakery House"></a>
 				<p>&nbsp;</p>
 				<h1>Hong's Bakery House</h1>
 				<p>&nbsp;</p>
 				<h2>Good day begins with our bread!</h2>
 				<p>&nbsp;</p>
-			</center>	
 		</header>
 
 		<div id="content-wrapper">
-            <center>
 			<form id="login" action="#" method="get">
 					<label>Get Bread Menu And Goupon!</label>
-					<label for="email" name="emailAddress">Email Address: </label>
+					<label>Email Address: </label>
 					<input type="email" name="email" id="email" placeholder="you@example.com" />
-					<input type="image" src="images/send-button.png" alt="Submit" id="send">
+					<input type="image" src="images/send-button.png" alt="Submit" id="send" />
+
 	        </form>	
-	        </center>	
 	        <p>&nbsp;</p>
 
 			<p class="text"><span class="capital1">O</span>ur bekery house offer homemade fresh baked bread. Different style of bread is made everyday and we update our bread menu every week.</p> 
 
-			<br>
-				<div id="contact_info">
+			<p>&nbsp;</p>
+
 					<p class="text"><span class="capital1">Open Hour: </span></p>
 					<p class="text">Monday - Friday: 6:45 AM - 6:30 PM</p>
 					<p class="text">Saturday: 6:45 AM - 5:30 PM</p>
 					<p class="text">Sunday 9:00 AM - 2:30 PM</p>
-				</dir>
-		</dir>
-	</dir>
+		</div>
  
-</body>
+	</body>
 
 </html>
