@@ -1,11 +1,12 @@
 /* Custom Site Styles */
 html {
-	background-image: url("../images/background.jpg");
-	padding: .625em; /* 10px @ 16px */
+  background-image: url("../images/background.jpg");
+  padding: .625em; /* 10px @ 16px */
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ie-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  font-size: 100%;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -17,14 +18,13 @@ html {
 body {
   color: #222; /* Never quite true black */
   background: #FAFAFA; /* A little grayer than true white */
-  font-size: 1.125em; /* 18px base font size */
+  font-size: 1.188em; /* 18px base font size */
   line-height: 1.44em; /* 25.92px baseline grid */
 }
 
 #header {
-	border-radius: 0.75em 0.75em 0 0; 
-
-	  background: 
+  border-radius: 0.75em 0.75em 0 0; 
+    background: 
     /* top, transparent red, faked with gradient */ 
     linear-gradient(
       rgba(125, 129, 112, 0.5) , 
@@ -32,7 +32,7 @@ body {
     ),
     /* bottom, image */
     url("../images/header_back.jpg");
-	color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 #header a#logo1 img {
@@ -41,23 +41,30 @@ height: 3.75em; /* 10px @ 16px */
 }
 
 #header h1 {
-	font-family: 'Lobster', cursive;
-	font-size: 3em;  /* 10px @ 16px */
+  font-family: 'Lobster', cursive;
+  font-size: 3em;  /* 10px @ 16px */
   line-height: 1.0437583893em;
+  padding-bottom: 1em;
 }
 
-#header h2, #emailAddress {
+#emailAddress {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.35em;  /* 10px @ 16px */
   line-height: 1.0437583893em;
 }
 
 #email{
-  width: 15.3125em;
-  height: 3em;
+  width: 12.3125em;
+  height: 2.5em;
   -webkit-border-radius: 0.625em;
     -moz-border-radius: 0.625em;
   border:0.0625em solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #DDD;
+  font-size: inherit;
+  font-family: 'Alegreya Sans', sans-serif;
+  padding: 1em;
 }
 
 #send{
@@ -70,55 +77,75 @@ height: 3.75em; /* 10px @ 16px */
   font-size: 1.375em;
 }
 
-label:after {
-  content: ":  ";
+form {
+  font-family: times-serif;
+  font-size: 1.35em;
+  font-weight: bold;
+  line-height: 1.0437583893em;
 }
 
-h3 {
+
+h2 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.074em;
+  font-size: 2em;
   font-weight: bold;
   line-height: 1.0437583893em;
 }
 
 p {
   text-indent: 9.09090909%; /* Use one of 7-column grid to indent * */
+  line-height: 2.0437583893em;
+  padding-bottom: 0.8em;
 }
 
-h3 + p {
-  text-indent: 0; /* But don't indent at all on paragraphs immediately following h1 */
+.capital1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.875;
+  font-weight: bold;
 }
 
-h3 + p::first-line {
-  font-variant: small-caps; /* This is ugly; with OpenType, we can make it better */
+.text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  text-align: left;
 }
 
 #contact_info {
   padding-left: 1.25em;
 }
 
-#time {
-  padding-left: 2.575em;
-}
-
 #content-wrapper {
   margin: 0.728em 2.16em 1.44em 1.44em; /* Use 6:5 ratio w/ baseline grid for mobile-first margins */
-}
+  padding: .625em 0.64em;
+  /* .625em = half a line-height (23.75px) at 19px em */
+  }
 
-@media screen and (min-width: 790px) { /* Leaving media query in pixels for class demo */
-
-h3{
-    position: absolute; /* Pull headings out of the document flow */
+  input,label {
+    display: block;
   }
   
-h3 {
-    top: 10.85em; 
+  label {
+    margin-top: 1em;
+  }
+  
+  /*
+  Using the .nojs utility class to push
+  #submit down by an em on JavaScript-less
+  views of the page:
+*/
+  .nojs #submit {
+    margin-top: 1em;
   }
 
-  #content-wrapper {
-    margin: 21.81818181% 27.27272727% 1.44em 18.18181818%;
-    /* Top margin makes for the 6:5 ratio of the left one-column margin */
-    /* 21.81818181 / 11 = 1.9834710736% */
-  }
+  /* And set #email to 60% of the screen */
+.js #email {
+  width: 60%;
+}
 
+  #login label.error {
+    margin-left: 10px;
+    width: auto;
+    display: inline;
+    color: red;
+  }
 
