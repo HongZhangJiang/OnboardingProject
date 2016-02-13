@@ -8,10 +8,38 @@
 	 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css' />
 	 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css' />
 		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	  	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+   		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+   		<script src="js/jquery.js"></script>
+   		<script src="js/jquery.validate.js"></script>
 
-	</head>
+ 	<script>
+	$.validator.setDefaults({
+		submitHandler: function() {
+			alert("We have received!");
+		}
+	});
+
+	$().ready(function() {
+		// validate signup form on keyup and submit
+		$("#login").validate({
+			rules: {
+				email: {
+					required: true,
+					email: true
+				},
+			},
+			messages: {
+				email: "Please enter a valid email address",
+			}
+		});
+	});
+	</script>
+ 	
+ 	</head>
 
 	<body>
 	<div id="page-wrapper">
